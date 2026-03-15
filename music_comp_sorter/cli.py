@@ -1,4 +1,4 @@
-# music_sorter/cli.py
+# music_comp_sorter/cli.py
 import click
 import os
 from .config import load_config

@@ -1,4 +1,4 @@
-# music_sorter/review_ambiguous.py
+# music_comp_sorter/review_ambiguous.py
 import json
 from .db import DB
 from .logger import logger

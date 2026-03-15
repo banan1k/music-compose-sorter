@@ -1,4 +1,4 @@
-# music_sorter/utils.py
+# music_comp_sorter/utils.py
 import re
 from typing import Tuple
 import unicodedata

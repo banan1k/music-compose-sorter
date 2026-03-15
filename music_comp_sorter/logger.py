@@ -1,4 +1,4 @@
-# music_sorter/logger.py
+# music_comp_sorter/logger.py
 import logging
 import os
 

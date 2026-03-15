@@ -1,4 +1,4 @@
-# music_sorter/identifier.py
+# music_comp_sorter/identifier.py
 import time
 import threading
 from typing import List, Dict, Optional

@@ -1,4 +1,4 @@
-# music_sorter/organizer.py
+# music_comp_sorter/organizer.py
 import os
 import shutil
 from .logger import logger

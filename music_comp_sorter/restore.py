@@ -1,11 +1,11 @@
-# music_sorter/restore.py
+# music_comp_sorter/restore.py
 import os
 import json
 from .logger import logger
 from .tag_writer import write_tags
 
 def restore_from_backup(file_path: str, fields=None, backup_dir=None, dry_run=False):
-    backup_path = os.path.join(backup_dir or os.path.expanduser("~/music_sorter_backups"), os.path.basename(file_path) + ".original_metadata.json")
+    backup_path = os.path.join(backup_dir or os.path.expanduser("~/music_comp_sorter_backups"), os.path.basename(file_path) + ".original_metadata.json")
     if not os.path.exists(backup_path):
         logger.error("No backup found for %s", file_path)
         return False

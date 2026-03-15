@@ -1,4 +1,4 @@
-# music_sorter/scanner.py
+# music_comp_sorter/scanner.py
 import os
 from .db import DB
 from .utils import is_supported

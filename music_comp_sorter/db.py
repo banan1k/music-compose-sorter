@@ -1,4 +1,4 @@
-# music_sorter/db.py
+# music_comp_sorter/db.py
 import sqlite3
 import os
 from .logger import logger

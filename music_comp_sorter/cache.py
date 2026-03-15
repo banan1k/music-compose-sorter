@@ -1,4 +1,4 @@
-# music_sorter/cache.py
+# music_comp_sorter/cache.py
 import os
 import json
 import time

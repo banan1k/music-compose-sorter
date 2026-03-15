@@ -1,15 +1,15 @@
-# music_sorter/config.py
+# music_comp_sorter/config.py
 from dataclasses import dataclass, field
 import os
 import tomllib
 
-DEFAULT_CONFIG_PATH = os.path.expanduser("~/.config/music_sorter/config.toml")
+DEFAULT_CONFIG_PATH = os.path.expanduser("~/.config/music_comp_sorter/config.toml")
 
 @dataclass
 class Config:
-    db_path: str = os.path.expanduser("~/.local/share/music_sorter/state.db")
-    metadata_cache_dir: str = os.path.expanduser("~/.local/share/music_sorter/metadata_cache")
-    backup_dir: str = os.path.expanduser("~/music_sorter_backups")
+    db_path: str = os.path.expanduser("~/.local/share/music_comp_sorter/state.db")
+    metadata_cache_dir: str = os.path.expanduser("~/.local/share/music_comp_sorter/metadata_cache")
+    backup_dir: str = os.path.expanduser("~/music_comp_sorter_backups")
     user_agent: str = "music-sorter/1.0 (contact: none)"
     musicbrainz_rate_limit: float = 1.0
     network_threads: int = 4
@@ -27,7 +27,7 @@ def load_config(path: str | None = None) -> Config:
     if os.path.exists(p):
         with open(p, "rb") as f:
             raw = tomllib.load(f)
-        for k, v in raw.get("music_sorter", {}).items():
+        for k, v in raw.get("music_comp_sorter", {}).items():
             if hasattr(cfg, k):
                 setattr(cfg, k, v)
     return cfg

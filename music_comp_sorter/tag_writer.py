@@ -1,4 +1,4 @@
-# music_sorter/tag_writer.py
+# music_comp_sorter/tag_writer.py
 from mutagen import File
 from mutagen.id3 import ID3, TIT2, TPE1, TALB, TRCK, APIC, error as ID3Error
 from mutagen.flac import Picture, FLAC
