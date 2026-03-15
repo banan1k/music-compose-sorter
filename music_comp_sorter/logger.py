@@ -2,10 +2,10 @@
 import logging
 import os
 
-LOG_DIR = os.path.expanduser("~/.local/share/music_sorter/logs")
+LOG_DIR = os.path.expanduser("~/.local/share/music_comp_sorter/logs")
 os.makedirs(LOG_DIR, exist_ok=True)
 
-logger = logging.getLogger("music_sorter")
+logger = logging.getLogger("music_comp_sorter")
 logger.setLevel(logging.INFO)
 fmt = logging.Formatter("%(asctime)s %(levelname)s: %(message)s")
 

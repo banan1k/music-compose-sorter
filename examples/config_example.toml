@@ -4,11 +4,16 @@ db_path = "~/.local/share/music_comp_sorter/state.db"
 metadata_cache_dir = "~/.local/share/music_comp_sorter/cache"
 backup_dir = "~/music_comp_sorter_backups"
 
+library_output_dir = "C:\Users\Администратор\Desktop\musc_dest"
+
 musicbrainz_rate_limit = 1.0
 network_threads = 4
 file_threads = 4
 
 export_covers = true
+cover_export_mode = "global"  # album | artist | global
 fingerprint_enabled = true
 
-acoustid_api_key = "YOUR_API_KEY"
+acoustid_api_key = "your API key"
+
+duplicate_mode = "keep_both"
