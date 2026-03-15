@@ -2,7 +2,7 @@
 import click
 import os
 from .config import load_config
-from .db import DB
+from music_comp_sorter.db import DB
 from .scanner import scan_directory
 from .logger import logger
 from .cache import MetaCache

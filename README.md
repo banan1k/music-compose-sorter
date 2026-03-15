@@ -50,37 +50,33 @@ filename
 
 # Требования
 
-Python:
-
 ```
 Python 3.10+
 ```
-
-Рекомендуется Linux / macOS, но Windows тоже работает.
 
 ---
 
 # Установка
 
-## 1. Склонировать проект
+## 1. Клонировать репозиторий
 
 ```
 git clone <repo>
-cd music-sorter
+cd music_compose_sorter
 ```
 
 ---
 
 ## 2. Создать виртуальное окружение
 
-Linux / macOS:
+Linux / macOS
 
 ```
 python3.10 -m venv venv
 source venv/bin/activate
 ```
 
-Windows:
+Windows
 
 ```
 python -m venv venv
@@ -150,7 +146,11 @@ musicbrainz_rate_limit = 1.0
 network_threads = 4
 file_threads = 4
 
+library_output_dir = "~/MusicSorted"
+
 export_covers = true
+cover_export_mode = "global"
+
 fingerprint_enabled = true
 
 acoustid_api_key = "YOUR_API_KEY"
@@ -158,13 +158,41 @@ acoustid_api_key = "YOUR_API_KEY"
 
 ---
 
-# Структура рабочей директории
+# Режимы экспорта обложек
 
-После запуска программа создаёт:
+### album
+обложка хранится в папке альбома
+```
+Artist/
+   Album/
+       cover.jpg
+```
+---
+### artist
+создаётся папка обложек артиста
+```
+Artist/
+   covers/
+       album.jpg
+```
+---
+### global (по умолчанию)
+все обложки сохраняются в одной папке
+```
+covers/
+   album - artist.jpg
+```
+---
+
+# Рабочие директории
+
+После запуска создаются:
 
 ```
 ~/.local/share/music_comp_sorter/
+```
 
+```
 state.db
 cache/
 logs/
@@ -176,13 +204,8 @@ logs/
 logs/errors.log
 ```
 
-Backup тегов:
-
-```
-~/music_comp_sorter_backups/
-```
-
 ---
+
 
 # Как пользоваться программой (STEP BY STEP)
 
@@ -348,22 +371,6 @@ python -m music_comp_sorter.cli process --mode keep_both
 
 ---
 
-# Экспорт обложек
-
-Если включено:
-
-```
-export_covers = true
-```
-
-то рядом с альбомом будет сохранено:
-
-```
-cover.jpg
-```
-
----
-
 # Поддерживаемые форматы
 
 ```
@@ -382,29 +389,6 @@ wma
 ```
 
 будут **пропущены**.
-
----
-
-# Пример структуры после сортировки
-
-До:
-
-```
-Music/
-    track1.mp3
-    track2.mp3
-```
-
-После:
-
-```
-Music/
-    Artist/
-        Album/
-            01 Track.mp3
-            02 Track.mp3
-            cover.jpg
-```
 
 ---
 
@@ -490,17 +474,6 @@ original_metadata.json
 ```
 
 Поэтому любые изменения можно отменить.
-
----
-
-# План развития
-
-Планируемые улучшения:
-
-* полноценная поддержка m4a cover art
-* более точный анализ multi-artist
-* GUI для review конфликтов
-* поддержка дополнительных источников метаданных
 
 ---
 
