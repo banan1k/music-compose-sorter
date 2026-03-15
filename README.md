@@ -45,8 +45,6 @@ music-sorter restore
 - Backup оригинальных тегов сохраняется в `~/.local/share/music_sorter/backups` (или в config.backup_dir).
     
 
-```
-
 ---
 
 # 9. Примеры логов и формата ошибок
@@ -58,3 +56,5 @@ music-sorter restore
 2026-03-15 12:02:11 WARNING: Unsupported format: /home/user/Music/song.wav  
 2026-03-15 12:05:02 ERROR: MusicBrainz search failed: HTTPError('503 Service Unavailable')  
 2026-03-15 12:05:02 INFO: File /home/user/Music/Artist/Track.mp3 marked as error (MB search)
+
+```
